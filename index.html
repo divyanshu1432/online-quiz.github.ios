@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+    <head> <title> online exam portal..
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width = device-width initial-scale=1.0" />         </title> 
+                                    
+                                    <style>
+                                input {margin-left: 20%;}
+                                h3 {text-align: center;}
+                                .container{ background-color: indigo;}
+                             
+                                .ques1 , .ques2, .ques3, .ques4 , .ques5  {background-color: khaki; 
+                                height: 200px; margin-left: 30%;
+                                width:300px;}
+
+
+                                
+                                    </style>
+                                    
+                                    <link rel="stylrsheet" href="onexam.css"> 
+                                    </head>
+                                                                <body > 
+
+                             <div class="container"> 
+                            <form name = "quiz" onsubmit="return submitt()">
+                            <header> <h1 style="text-align: center; color: greenyellow;"> simple exam quiz projecct </h1> </header>
+                                <h4 style="text-align: center; color: lemonchiffon;" id="result"> your result will be here </h4>
+
+
+                            <hr> 
+                                 <div  class="ques1">                  
+                            <h3 style="text-align: center;" > Q-1 We write CSS code inside ? </h3>
+                            <input  type="radio" name="q1" id="q1a"  value="a" > body <br>
+                            <input  type="radio" name="q1" id="q1a"  value="b" > html<br>
+                            <input type="radio" name="q1" id="q1a"  value="c" > style <br>
+                            <input type="radio" name="q1" id="q1a"  value="d" > span <br>
+                        </div>        
+                            <br> 
+<div class="ques2">                           <h3> Q-2 is Bootstrap a programming langauge ? </h3>
+                            <input type="radio" name="q2" id="q2a"  value="a" >  Yes <br>
+                            <input type="radio" name="q2" id="q2b"  value="b" > No <br>
+                        </div>
+
+                            <br> 
+<div class="ques3"> 
+                            <h3> Q-3 How would you write Hello in alert box  ? </h3>
+                            <input type="radio" name="q3"  id="q3a" value="a" >alert("hello") <br>
+                            <input type="radio" name="q3"  id="q3b" value="b" > alert(hello)<br>
+                            <input type="radio" name="q3"  id="q3c" value="c" >Document.write("hello") <br>
+                            <input type="radio" name="q3"  id="q3d" value="d" >alert-box("hello") <br>
+                        </div>
+                            <br>  
+                          
+                            <div class="ques5">
+                            <h3> Q-4 is JavaScript related to Java programming langauge  ? </h3>
+                            <input type="radio" name="q4" id="q4a" value="a" >  Yes <br>
+                            <input type="radio" name="q4" id="q4b" value="b" > No <br></div>
+
+                            <br>
+                            <div class="ques4">
+                            <h3> Q-5 controller in Angular js we use to control  ? </h3>
+                            <input type="radio" name="q5"  id="q5a" value="a" >  Data  <br>
+                            <input type="radio" name="q5"  id="q5b" value="b" >Elements <br>
+                            <input type="radio" name="q5"  id="q5c" value="c" >  Tags  <br>
+                            <input type="radio" name="q5"  id="q5d" value="d">  Class <br> </div>
+
+
+
+
+                            <br> 
+                            <button style="color: black; background-color: lime ; text-align: center; 
+                            margin-left: 50%; height: 35px; width: 75px; margin-top: -20px;"> submit </button> 
+                                                </form>
+                                                </div>
+
+                    <script>
+                    function submitt(){
+                        
+                    var total = 6;
+                    var score = 0;
+
+                    var x1 = document.forms['quiz']['q1'].value;
+                    var x2 = document.forms['quiz']['q2'].value;
+                    var x3 = document.forms['quiz']['q3'].value;
+                    var x4 = document.forms['quiz']['q4'].value;
+
+                    var x5 = document.forms['quiz']['q5'].value;
+
+
+                  /*  document.write(x1)
+
+                    document.write(x2)
+                    document.write(x3)
+                    document.write(x4)
+                    document.write(x5)*/
+
+                    for(i = 1; i<total; i++){
+
+                    if(eval("x"+i)== null  || eval("x"+i) == '' ) {
+                        alert("you miss question" + "" +  i);
+                        return false;
+                    }}
+
+                var Answer = ["c" , "b" , "a"  , "b", "a"]
+ 
+ if (x1 == Answer[0]){
+    score+=2;
+ }
+
+ if (x2 == Answer[1]){
+    score+=2;
+ }
+
+ if (x3 == Answer[2]){
+    score+=2;
+ }
+   if (x4 == Answer[3]){
+    score+=2;
+ }
+   if (x5 == Answer[4]){
+    score+=2;
+ }
+
+ 
+   
+   
+                   
+                    var y = document.getElementById("result");
+                    y.innerHTML = "<h3> you scored" + " " + " " + score + " "+  "out of 10" + "</h3>";
+                                     
+                    return false;
+                    }
+                    </script>
+
+
+
+
+
+
+    </body>
+</html>
